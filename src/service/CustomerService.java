@@ -1,7 +1,7 @@
 package service;
 
 import model.Customer;
-import model.exception.CustomerExistException;
+import model.exception.CustomerAlreadyExistException;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -12,13 +12,13 @@ public class CustomerService {
 
     private static Map<String, Customer> customerMap = new HashMap<>();
 
-    public void addCustomer(String email, String firstName, String lastName) throws CustomerExistException {
+    public void addCustomer(String email, String firstName, String lastName) throws CustomerAlreadyExistException {
 
         if (customerMap.get(email.trim().toLowerCase()) == null) {
 
             customerMap.put(email.trim().toLowerCase(Locale.ROOT), new Customer(firstName, lastName, email));
         }else {
-            throw  new CustomerExistException("Customer Already Exists with this Email Address");
+            throw  new CustomerAlreadyExistException("Customer Already Exists with this Email Address");
         }
     }
 

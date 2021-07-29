@@ -3,7 +3,7 @@ package api;
 import model.Customer;
 import model.IRoom;
 import model.Reservation;
-import model.exception.CustomerExistException;
+import model.exception.CustomerAlreadyExistException;
 import service.CustomerService;
 
 import java.util.Collection;
@@ -21,7 +21,7 @@ public class HotelResource {
         return null;
     }
 
-    public void createACustomer(String email, String firstName, String lastName) throws CustomerExistException {
+    public void createACustomer(String email, String firstName, String lastName) throws CustomerAlreadyExistException {
 
         service.addCustomer(email,firstName,lastName);
 

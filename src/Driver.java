@@ -8,8 +8,8 @@ public class Driver {
 
 
         Scanner scanner = new Scanner(System.in);
-        var service = new CustomerService();
-        var hotelResource = new HotelResource(service);
+        var customerService = new CustomerService();
+        var hotelResource = new HotelResource(customerService);
 
         while (true) {
             System.out.println(" 1. Find & Reserve A Room");
@@ -44,7 +44,7 @@ public class Driver {
             }
 
             if (valueEntered == 5) {
-                System.out.println(" Exiting Shitty While Loop");
+                System.out.println("Thank you for using the Application!");
                 break;
             }
             continue;

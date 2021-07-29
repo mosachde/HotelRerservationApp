@@ -1,5 +1,5 @@
 import api.HotelResource;
-import model.exception.CustomerExistException;
+import model.exception.CustomerAlreadyExistException;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class MainMenu {
         try {
             hotelResource.createACustomer(email,firstName,lastName);
             System.out.println(" Account Created Successfully for " + firstName);
-        } catch (CustomerExistException e) {
+        } catch (CustomerAlreadyExistException e) {
             System.out.println(e.getMessage());
         }
 

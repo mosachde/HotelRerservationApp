@@ -29,7 +29,7 @@ public class ReservationService {
 
     public Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
 
-
+        return null;
 
     }
 
@@ -60,6 +60,7 @@ public class ReservationService {
             }
 
         }
+        return null;
     }
 
 }

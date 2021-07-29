@@ -20,7 +20,6 @@ public class AdminMenu {
                 System.out.println(" Please Enter your Choice");
                 int valueEntered = scanner.nextInt();
 
-
                 switch (valueEntered){
 
                     case 4:
